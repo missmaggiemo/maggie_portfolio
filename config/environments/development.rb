@@ -34,4 +34,27 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  
+  # mailer settings
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.raise_delivery_errors = true
+
+  config.before_configuration do
+    env_file = File.join(Rails.root, 'config', 'local_env.yml')
+    YAML.load(File.open(env_file)).each do |key, value|
+      ENV[key.to_s] = value
+    end if File.exists?(env_file)
+  end
+  
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "missmaggiemo.com",
+    :user_name            => ENV["GAPPS_USERNAME"],
+    :password             => ENV["GAPPS_PASS"],
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
+  
 end
