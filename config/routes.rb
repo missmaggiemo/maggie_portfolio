@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'static_pages#index'
   
   # redirect /projects to /#projects
+  
+  get '/projects', to: redirect('/')
 
   #email
   match '/email', to: 'messages#new', via: 'get', as: "email"
