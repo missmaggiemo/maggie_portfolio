@@ -17,4 +17,5 @@
 
 # Ignore ymls
 
-*.yml
+local_env.yml 
+database.yml 

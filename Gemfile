@@ -30,6 +30,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'font-awesome-rails'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'better_errors'
