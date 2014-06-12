@@ -133,44 +133,59 @@
             <div class="row">
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "ruby.png", alt: "Ruby", class: "img-responsive tech-icon" %>
+                    <a href="https://www.ruby-lang.org/en/" target="blank">
+                      <%= image_tag "ruby.png", alt: "Ruby", class: "img-responsive tech-icon" %>
+                    </a>
                   </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "css.png", alt: "CSS3", class: "img-responsive tech-icon" %>
+                    <a href="http://www.w3schools.com/css/css3_intro.asp" target="blank">
+                      <%= image_tag "css.png", alt: "CSS3", class: "img-responsive tech-icon" %>
                     </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "angularjs.png", alt: "AngularJS", class: "img-responsive tech-icon" %>
+                    <a href="https://angularjs.org/" target="blank">
+                      <%= image_tag "angularjs.png", alt: "AngularJS", class: "img-responsive tech-icon" %>
+                    </a>
                     </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "js.png", alt: "JavaScript", class: "img-responsive tech-icon" %>
-                    </div>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="blank">
+                      <%= image_tag "js.png", alt: "JavaScript", class: "img-responsive tech-icon" %>
+                    </a>
+                  </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "rails.png", alt: "Rails", class: "img-responsive tech-icon" %>
+                    <a href="http://rubyonrails.org/" target="blank">
+                      <%= image_tag "rails.png", alt: "Rails", class: "img-responsive tech-icon" %>
+                    </a>
                     </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "html5.png", alt: "HTML5", class: "img-responsive tech-icon" %>
+                    <a href="http://www.w3schools.com/html/html5_intro.asp" target="blank">
+                      <%= image_tag "html5.png", alt: "HTML5", class: "img-responsive tech-icon" %>
+                    </a>
                     </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "backbone.png", alt: "BackboneJS", class: "img-responsive tech-icon" %>
+                    <a href="http://backbonejs.org/" target="blank">
+                      <%= image_tag "backbone.png", alt: "BackboneJS", class: "img-responsive tech-icon" %>
+                    </a>
                     </div>
                 </div>
                 <div class="col-sm-3">
                   <div class="tech-icon-div">
-                    <%= image_tag "python.png", alt: "JS", class: "img-responsive tech-icon" %>
+                    <a href="https://www.python.org/" target="blank">
+                      <%= image_tag "python.png", alt: "JS", class: "img-responsive tech-icon" %>
+                    </a>
                     </div>
                 </div>
             </div>
@@ -456,6 +471,13 @@
         }
       });
     })
+    
+    $(".tech-icon").on('mouseenter mouseleave',function(event) {
+      var el = $(this);
+      if (!el.data("b")) el.effect("bounce", {direction: 'up', distance: 10, times: 1} );
+      el.data("b", event.type=="mouseenter" ? true : false);
+    });
+    
     </script>
 
 </body>
