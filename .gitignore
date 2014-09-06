@@ -16,6 +16,8 @@
 /tmp
 
 # Ignore ymls
-
 local_env.yml 
-database.yml 
+database.yml
+
+# Ignore random crap
+*.DS_Store
