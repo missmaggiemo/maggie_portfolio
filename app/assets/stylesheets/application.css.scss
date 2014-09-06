@@ -22,15 +22,15 @@ img#profile {
 }
 
 header {
-  background: #048DAF !important;
+  background: #A8CABA !important;
 }
 
 section.success {
-  background: #048DAF !important;
+  background: #A8CABA !important;
 }
 
 hr.star-light:after {
-  background-color: #048DAF !important;
+  background-color: #A8CABA !important;
 }
 
 img.modal-image {
@@ -44,7 +44,7 @@ img.modal-image {
 .success.divider {
   text-align: center;
   padding: 70px;
-  background-color: #048DAF;
+  background-color: #A8CABA;
   width: 100vw;
   li {
     .btn-social {
@@ -73,4 +73,8 @@ img.modal-image {
     
     padding: 40px;
   }
+}
+
+footer .footer-above {
+    background-color: #A8CABA !important;
 }
